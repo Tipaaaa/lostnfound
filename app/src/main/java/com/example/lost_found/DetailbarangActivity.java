@@ -14,7 +14,5 @@ public class DetailbarangActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailbarang);
 
-        Intent detailBarangIntent = getIntent();
-        String namaBarang = detailBarangIntent.getStringExtra("NAMA_BARANG");
     }
 }

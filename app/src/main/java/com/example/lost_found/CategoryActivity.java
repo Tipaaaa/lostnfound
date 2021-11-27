@@ -1,10 +1,8 @@
-package com.example.lostfound_app;
+package com.example.lost_found;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.lost_found.R;
 
 public class CategoryActivity extends AppCompatActivity {
 

@@ -45,7 +45,6 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
     OnBarangHolderClickListener listener = null;
 
     public interface OnBarangHolderClickListener{
-
         void onClick(View v,  Barang barang);
 
     }

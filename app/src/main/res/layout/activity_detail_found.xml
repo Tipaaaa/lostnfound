@@ -22,7 +22,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textDetailFound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dm_serif_text"
@@ -100,8 +100,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/dm_serif_text"
         android:text="Name Of Items"
+        android:textAlignment="center"
         android:textColor="#333E63"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
@@ -110,13 +111,13 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/textkategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dm_serif_text"
         android:text="Category"
         android:textColor="#333E63"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"
@@ -125,13 +126,13 @@
         app:layout_constraintVertical_bias="0.129" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/textLokasiDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/dm_serif_text"
         android:text="Location"
         android:textColor="#333E63"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.103"

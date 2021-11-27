@@ -3,14 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_category.xml" value="0.1" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_change.xml" value="0.27447916666666666" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_detail_found.xml" value="0.27447916666666666" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_detailbarang.xml" value="0.27447916666666666" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_founditem.xml" value="0.27447916666666666" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_profile.xml" value="0.1334853090172239" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/activity_regist.xml" value="0.4" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/category.xml" value="0.264" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/item_barang.xml" value="0.271286231884058" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/item_barang2.xml" value="0.14375" />
+        <entry key="..\:/College/Semester 7/Pemrograman Teknologi Bergerak/LostandFound_2.0/app/src/main/res/layout/item_category.xml" value="0.264" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_detail_found.xml" value="0.271286231884058" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_detailbarang.xml" value="0.271286231884058" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_founditem.xml" value="0.271286231884058" />
-        <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/activity_profile.xml" value="0.4" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/item_barang.xml" value="0.536" />
-        <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/item_barang1.xml" value="0.264" />
         <entry key="..\:/Users/USER/StudioProjects/lost_found/app/src/main/res/layout/main_menu.xml" value="0.271286231884058" />
         <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lost_found2/app/src/main/res/layout/activity_category.xml" value="0.25" />
         <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lost_found2/app/src/main/res/layout/activity_change.xml" value="0.12771739130434784" />

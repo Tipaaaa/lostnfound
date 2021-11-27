@@ -23,6 +23,12 @@
             android:name=".DetailFoundActivity"
             android:exported="true" />
         <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".ChangeActivity"
             android:exported="true" />
         <activity
