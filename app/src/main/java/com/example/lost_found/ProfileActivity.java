@@ -16,12 +16,15 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void toHistory(View view){
-        Toast.makeText(this, "Anda Memasuki Page History", Toast.LENGTH_SHORT).show();
-        //Intent historyIntent = new Intent(this, HistoryActivity.class);
+        //Toast.makeText(this, "Anda Memasuki Page History", Toast.LENGTH_SHORT).show();
+        Intent historyIntent = new Intent(this, HistoryActivity.class);
+        startActivity(historyIntent);
     }
 
     public void toFoundItem(View view){
-        Toast.makeText(this, "Anda Memasuki Page Found Item", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Anda Memasuki Page Found Item", Toast.LENGTH_SHORT).show();
+        Intent foundItemIntent = new Intent(this, FounditemActivity.class);
+        startActivity(foundItemIntent);
     }
 
     public void toAccount(View view){
@@ -29,6 +32,8 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void toChangePass(View view){
-        Toast.makeText(this, "Anda Memasuki Page Change Password", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Anda Memasuki Page Change Password", Toast.LENGTH_SHORT).show();
+        Intent changepassIntent = new Intent(this, ChangeActivity.class);
+        startActivity(changepassIntent);
     }
 }

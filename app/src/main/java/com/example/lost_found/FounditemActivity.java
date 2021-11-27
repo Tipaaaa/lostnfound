@@ -1,4 +1,4 @@
-package com.example.lostfound_app;
+package com.example.lost_found;
 
 import androidx.appcompat.app.AppCompatActivity;
 
