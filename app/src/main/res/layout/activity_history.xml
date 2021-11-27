@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minHeight="48px"
-    tools:context=".activity_history">
+    android:minHeight="48px">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -43,14 +42,15 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="409dp"
-        android:layout_height="635dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistoryBarang"
+        android:layout_width="413dp"
+        android:layout_height="632dp"
+        android:layout_marginTop="50dp"
+        tools:listitem="@layout/item_barang"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
