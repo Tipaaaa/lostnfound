@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.lost_found.model.Barang;
+
+import java.util.ArrayList;
+
 public class DetailFoundActivity extends AppCompatActivity {
 
     TextView textNamaBarang;
@@ -23,5 +27,30 @@ public class DetailFoundActivity extends AppCompatActivity {
 
         textkategori= findViewById(R.id.textkategori);
         textkategori.setText(kategori);
+    }
+
+    public ArrayList<Barang> getBarang(){
+        ArrayList<Barang> listBarang = new ArrayList<Barang>();
+        String nama;
+        String Kategori;
+        String details = "Details";
+        listBarang.add(new Barang(
+                nama = "Kaos Merah Maroon",
+                Kategori = "Pakaian",
+                details));
+        listBarang.add(new Barang(
+                nama = "Jam DW Coklat",
+                Kategori = "Pakaian",
+                details));
+        listBarang.add(new Barang(
+                nama = "Jaket Hitam",
+                Kategori = "Pakaian",
+                details));
+        listBarang.add(new Barang(
+                nama = "Dompet Coklat",
+                Kategori = "Pakaian",
+                details));
+
+        return listBarang;
     }
 }
