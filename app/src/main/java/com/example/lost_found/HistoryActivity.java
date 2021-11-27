@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -86,5 +87,10 @@ public class HistoryActivity extends AppCompatActivity implements BarangAdapter.
     @Override
     public void onClick(View v, Barang barang) {
 
+    }
+    //on click pada tombol back History
+    public void backHistory(View view){
+        Intent backIntent = new Intent(this,  ProfileActivity.class);
+        startActivity(backIntent);
     }
 }

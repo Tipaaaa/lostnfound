@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         startActivity(profileIntent);
     }
 
+
     @Override
     public void onClick(View view, Kategori kategori) {
         Intent KategoriIntent = new Intent(this, CategoryActivity.class);

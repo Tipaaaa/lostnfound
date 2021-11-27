@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangViewHolder> {
 
 
+
     ArrayList<Barang> listData = new ArrayList<>();
 
     public class BarangViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener{

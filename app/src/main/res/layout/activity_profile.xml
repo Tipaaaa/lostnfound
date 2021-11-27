@@ -10,8 +10,8 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/dm_serif_text"
         android:text="Profile"
         android:textSize="20sp"
@@ -74,6 +74,8 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_bold"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:onClick="toHistory"
         android:text="History"
         app:layout_constraintStart_toStartOf="@+id/viewProfileMenu"
@@ -83,7 +85,7 @@
         android:id="@+id/textFoundItemButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito_bold"
         android:onClick="toFoundItem"
         android:text="Found Item"
@@ -103,10 +105,11 @@
 
     <TextView
         android:id="@+id/textChangePassButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="133dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/nunito_bold"
+        android:minHeight="48dp"
         android:onClick="toChangePass"
         android:text="Change Password"
         app:layout_constraintStart_toStartOf="@+id/textAccountButton"
@@ -177,5 +180,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLogout"
         app:srcCompat="@drawable/logo_1" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:background="#00FFFFFF"
+        android:onClick="backProfile"
+        app:layout_constraintBottom_toTopOf="@+id/viewProfileData"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428"
+        app:srcCompat="@drawable/back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

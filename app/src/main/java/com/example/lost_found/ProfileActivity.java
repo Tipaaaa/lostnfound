@@ -36,4 +36,9 @@ public class ProfileActivity extends AppCompatActivity {
         Intent changepassIntent = new Intent(this, ChangeActivity.class);
         startActivity(changepassIntent);
     }
+    //on click pada tombol back Profile
+    public void backProfile(View view){
+        Intent backIntent = new Intent(this,  MainActivity.class);
+        startActivity(backIntent);
+    }
 }

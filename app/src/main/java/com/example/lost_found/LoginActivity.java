@@ -38,4 +38,9 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
+    //on click pada register
+    public void loginToRegister(View view){
+        Intent registIntent = new Intent(this,  RegistActivity.class);
+        startActivity(registIntent);
+    }
 }
