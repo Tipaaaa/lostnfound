@@ -42,6 +42,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".FounditemActivity"
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

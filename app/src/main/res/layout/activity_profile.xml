@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:text="TextView"
+        android:text="Lee U-ju"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/viewProfileData" />
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="TextView"
+        android:text="081234567890"
         app:layout_constraintStart_toStartOf="@+id/textNamaProfile"
         app:layout_constraintTop_toBottomOf="@+id/textNamaProfile" />
 
