@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         Intent mainIntent = getIntent();
         String data = mainIntent.getStringExtra("nama_user");
 
-        Toast.makeText(this, "Selamat Datang "+ data, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Selamat Datang "+ data, Toast.LENGTH_SHORT).show();
     }
 
     public ArrayList<Barang> getBarang(){
