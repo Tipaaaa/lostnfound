@@ -3,6 +3,7 @@ package com.example.lost_found;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -66,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //panggil method
         Call<AuthClass> call = client.checkLogin(username, password);
-       
+
         call.enqueue(new Callback<AuthClass>() {
             @Override
             public void onResponse(Call<AuthClass> call, Response<AuthClass> response) {
@@ -78,6 +79,14 @@ public class LoginActivity extends AppCompatActivity {
                     String token = data.getToken();
                     String nama = data.getNama();
 
+                    //simpan data
+                    SharedPreferences simpandata =
+                            getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = simpandata.edit();
+
+                    editor.putString("token", token);
+                    editor.putString("nama", nama);
+                    editor.apply();
 
                     Toast.makeText(getApplicationContext(), "Selamat Datang "+nama, Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(getApplicationContext(), MainActivity.class);
