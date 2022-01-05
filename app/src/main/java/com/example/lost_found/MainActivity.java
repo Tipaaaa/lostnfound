@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         adapter.setListData(getBarang());
         adapter.setListener(this);
 
+        //sharedpreference
+        SharedPreferences simpan = getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
+        String nama = simpan.getString("nama", "");
+        Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
+
 
         rvListBarang = findViewById(R.id.rvListBarang);
         rvListBarang.setAdapter(adapter);
@@ -56,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         Intent mainIntent = getIntent();
         String data = mainIntent.getStringExtra("nama_user");
 
-        Toast.makeText(this, "Selamat Datang "+ data, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Selamat Datang "+ data, Toast.LENGTH_SHORT).show();
     }
 
     public ArrayList<Barang> getBarang(){
