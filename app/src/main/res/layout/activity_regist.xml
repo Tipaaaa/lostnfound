@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
+    android:onClick="daftarRegis"
     tools:context=".RegistActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_height="25dp"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/dm_serif_text"
-        android:text="Email"
+        android:text="Nama"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView25"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,7 @@
         app:srcCompat="@drawable/username" />
 
     <EditText
-        android:id="@+id/editUsernameRegist3"
+        android:id="@+id/editPasswordRegis"
         android:layout_width="285dp"
         android:layout_height="48dp"
         android:backgroundTint="#00FFFFFF"
@@ -57,7 +58,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView27"
         app:layout_constraintEnd_toEndOf="@+id/imageView27"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/imageView26"
         app:layout_constraintTop_toTopOf="@+id/imageView27"
         app:layout_constraintVertical_bias="0.0" />
@@ -75,7 +76,7 @@
         app:srcCompat="@drawable/username" />
 
     <EditText
-        android:id="@+id/editUsernameRegist2"
+        android:id="@+id/editUsernameRegist"
         android:layout_width="289dp"
         android:layout_height="48dp"
         android:backgroundTint="#00FFFFFF"
@@ -103,12 +104,12 @@
         app:srcCompat="@drawable/username" />
 
     <EditText
-        android:id="@+id/editUsernameRegist"
+        android:id="@+id/editNamaRegist"
         android:layout_width="289dp"
         android:layout_height="48dp"
         android:backgroundTint="#00FFFFFF"
         android:ems="10"
-        android:hint="Enter the email"
+        android:hint="Enter the Nama"
         android:inputType="textPersonName"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView25"
@@ -179,11 +180,47 @@
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView24"
-        app:layout_constraintVertical_bias="0.856"
+        app:layout_constraintVertical_bias="0.916"
         app:srcCompat="@drawable/button_regist"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="332dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordRegis"
+        app:srcCompat="@drawable/bg_input" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="111dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/dm_serif_text"
+        android:text="Kontak"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <EditText
+        android:id="@+id/editKontakRegist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="Enter the Kontak"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/imageView19"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="@+id/imageView19"
+        app:layout_constraintTop_toTopOf="@+id/imageView19" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
