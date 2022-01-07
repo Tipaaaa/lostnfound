@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = editPassword.getText().toString();
 
         //buat objek klien
-        String API_BASE_URL = "https://2389-125-167-48-185.ngrok.io/";
+        String API_BASE_URL = "https://a61d-125-167-48-26.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
