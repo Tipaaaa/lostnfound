@@ -1,6 +1,8 @@
 package com.example.lost_found.retrofit;
 
+import com.example.lost_found.model.AddBarangResponse;
 import com.example.lost_found.model.AuthClass;
+import com.example.lost_found.model.ClaimResponse;
 import com.example.lost_found.model.ListBarangObject;
 import com.example.lost_found.model.RegisResponse;
 
@@ -22,10 +24,25 @@ public interface PortalClient {
     @GET("api/barang")
     Call<ListBarangObject> getBarang(@Header("Authorization") String tokenb);
 
+    //EndPoin Regis
+    @FormUrlEncoded
     @POST("api/register")
     Call<RegisResponse> daftarRegis(@Field("nama") String nama,
                                     @Field("email") String email,
                                     @Field("password") String password,
                                     @Field("kontak") String kontak);
+
+    //Endpoin add Barang
+    @FormUrlEncoded
+    @POST("api/addbarang")
+    Call<AddBarangResponse> addBarang(@Field("nama_barang") String namaB,
+                                      @Field("deskripsi") String dskripsiB,
+                                      @Field("lokasi") String lokasiB,
+                                      @Field("id_penemu") int i_userr);
+
+    //Endpoin Claim Barang
+    @FormUrlEncoded
+    @POST("api/claimbarang")
+    Call<ClaimResponse> claimBarang(@Field("id") String id_barang);
 
 }

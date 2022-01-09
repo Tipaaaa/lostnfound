@@ -36,8 +36,18 @@
         <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lost_found2/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lost_found2/app/src/main/res/layout/activity_update.xml" value="0.11503623188405797" />
         <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lost_found2/app/src/main/res/layout/main_menu.xml" value="0.18" />
-        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_regist.xml" value="0.22" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/drawable/border.xml" value="0.33" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/drawable/circle_button.xml" value="0.2203125" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/drawable/roundedbutton.xml" value="0.2203125" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_category.xml" value="0.1" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_detail_found.xml" value="0.22" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_detailbarang.xml" value="0.25" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/activity_regist.xml" value="0.33" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/item_barang.xml" value="0.25" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/item_barang2.xml" value="0.1" />
+        <entry key="..\:/Users/Windows 10/AndroidStudioProjects/lostnfound/app/src/main/res/layout/item_category.xml" value="0.1" />
       </map>
     </option>
   </component>

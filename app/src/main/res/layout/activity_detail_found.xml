@@ -40,10 +40,11 @@
         android:id="@+id/imageButton7"
         android:layout_width="66dp"
         android:layout_height="62dp"
+        android:layout_marginTop="6dp"
         android:background="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintHorizontal_bias="0.904"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
@@ -105,25 +106,25 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textkategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dm_serif_text"
+        android:fontFamily="sans-serif"
         android:text="Category"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#333E63"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.117" />
 
     <TextView
         android:id="@+id/textLokasiDetail"
@@ -135,13 +136,13 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:layout_constraintVertical_bias="0.207" />
+        app:layout_constraintVertical_bias="0.536" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/textLokasib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/quicksand_medium"
@@ -150,10 +151,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
-        app:layout_constraintVertical_bias="0.277" />
+        app:layout_constraintVertical_bias="0.604" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -161,10 +162,45 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.539"
+        app:layout_constraintVertical_bias="0.748"
         app:srcCompat="@drawable/marker" />
+
+    <TextView
+        android:id="@+id/textnomor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ini Nomor"
+        android:textAlignment="textStart"
+        android:textColor="#673AB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textkategori" />
+
+    <TextView
+        android:id="@+id/textDesk"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:text="Ini deskripsi"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textnomor" />
+
+    <Button
+        android:id="@+id/buttonclaim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:onClick="claimBarangs"
+        android:text="Claim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

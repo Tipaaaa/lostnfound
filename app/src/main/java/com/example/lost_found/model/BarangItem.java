@@ -22,11 +22,17 @@ public class BarangItem{
     @SerializedName("nama_barang")
     private String namaBarang;
 
+    @SerializedName("nama")
+    private String nama;
+
+    @SerializedName("kontak")
+    private String kontak;
+
     @SerializedName("lokasi")
     private String lokasi;
 
-    @SerializedName("id")
-    private int id;
+    @SerializedName("id_barang")
+    private String id_barang;
 
     @SerializedName("deskripsi")
     private String deskripsi;
@@ -88,17 +94,25 @@ public class BarangItem{
         return namaBarang;
     }
 
+    public String getNama(){
+        return nama;
+    }
+
+    public String getKontak(){
+        return kontak;
+    }
+
     public void lokasi(String lokasi){
         this.lokasi = lokasi;
     }
     public String getLokasi(){return lokasi;}
 
-    public void setId(int id){
-        this.id = id;
+    public void setId(String id_barang){
+        this.id_barang = id_barang;
     }
 
-    public int getId(){
-        return id;
+    public String getId(){
+        return id_barang;
     }
 
     public void setDeskripsi(String deskripsi){

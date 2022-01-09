@@ -74,7 +74,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
         Barang barang = listData.get(position);
         holder.textNamaBarang.setText(barang.nama);
         holder.textKategori.setText(barang.Kategori);
-        holder.klikDetails.setText(barang.details);
+        holder.klikDetails.setText(barang.lokasi);
     }
 
     @Override

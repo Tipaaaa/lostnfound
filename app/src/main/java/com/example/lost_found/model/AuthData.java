@@ -11,6 +11,11 @@ public class AuthData {
     @SerializedName("token")
     @Expose
     private String token;
+
+    @SerializedName("id")
+    @Expose
+    private int id;
+
     @SerializedName("nama")
     @Expose
     private String nama;
@@ -23,6 +28,10 @@ public class AuthData {
 
     public String getToken() {
         return token;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setToken(String token) {

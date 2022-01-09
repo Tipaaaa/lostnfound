@@ -2,9 +2,12 @@ package com.example.lost_found;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.lost_found.model.RegisResponse;
@@ -27,6 +30,19 @@ public class RegistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_regist);
     }
 
+    public void setStatusRgs(int statusbar){
+        ProgressBar rg = findViewById(R.id.progressBarRgs);
+        //Button login = imageview23
+        Button rgBtn = findViewById(R.id.buttonRgs);
+        if (statusbar == 1){
+            rg.setVisibility(View.VISIBLE);
+            rgBtn.setVisibility(View.GONE);
+        } else if (statusbar == 0){
+            rg.setVisibility(View.GONE);
+            rgBtn.setVisibility(View.VISIBLE);
+        }
+    }
+
 
 
     public void daftarRegis(View view){
@@ -47,7 +63,7 @@ public class RegistActivity extends AppCompatActivity {
         String kontakRegis = editKontakRegis.getText().toString();
 
         //buat objek klien
-        String API_BASE_URL = "https://a61d-125-167-48-26.ngrok.io/";
+        String API_BASE_URL = " https://2779-125-167-49-94.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -64,17 +80,25 @@ public class RegistActivity extends AppCompatActivity {
 
         PortalClient client = retrofit.create(PortalClient.class);
 
+        //
+
         Call<RegisResponse> call = client.daftarRegis(namaRegis, usernameRegis, passwordRegis, kontakRegis);
 
+        setStatusRgs(1);
         call.enqueue(new Callback<RegisResponse>() {
             @Override
             public void onResponse(Call<RegisResponse> call, Response<RegisResponse> response) {
-                Toast.makeText(getApplicationContext(), "Registrasi Berhasil", Toast.LENGTH_SHORT).show();
+                setStatusRgs(0);
+                Toast.makeText(getApplicationContext(), "Registrasi Berhasil | Silahkan Login", Toast.LENGTH_SHORT).show();
+                Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(loginIntent);
+
             }
 
             @Override
             public void onFailure(Call<RegisResponse> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Regis Gagal", Toast.LENGTH_SHORT).show();
+                setStatusRgs(0);
             }
         });
 

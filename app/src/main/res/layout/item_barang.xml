@@ -2,6 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="9dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
     android:id="@+id/cardItemBarang"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
