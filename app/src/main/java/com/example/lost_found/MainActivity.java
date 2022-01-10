@@ -14,9 +14,21 @@ import android.widget.Toast;
 import com.example.lost_found.adapter.BarangAdapter;
 import com.example.lost_found.adapter.KategoriAdapter;
 import com.example.lost_found.model.Barang;
+import com.example.lost_found.model.BarangItem;
 import com.example.lost_found.model.Kategori;
+import com.example.lost_found.model.ListBarangObject;
+import com.example.lost_found.retrofit.PortalClient;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class MainActivity extends AppCompatActivity implements BarangAdapter.OnBarangHolderClickListener, KategoriAdapter.OnKategoriHolderClickListener{
@@ -30,12 +42,13 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         setContentView(R.layout.activity_main);
 
         BarangAdapter adapter = new BarangAdapter();
-        adapter.setListData(getBarang());
+
         adapter.setListener(this);
 
         //sharedpreference
         SharedPreferences simpan = getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
         String nama = simpan.getString("nama", "");
+        String token = simpan.getString("token", "");
         Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
 
 
@@ -60,9 +73,61 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
 
         Intent mainIntent = getIntent();
-        String data = mainIntent.getStringExtra("nama_user");
-
+        //String data = mainIntent.getStringExtra("nama_user");
         //Toast.makeText(this, "Selamat Datang "+ data, Toast.LENGTH_SHORT).show();
+
+        // minta data default
+        //buat objek klien
+        String API_BASE_URL = "https://a61d-125-167-48-26.ngrok.io/";
+
+        OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
+
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okBuilder.addInterceptor(logging);
+
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okBuilder.build());
+
+        Retrofit retrofit = builder.build();
+
+        PortalClient client = retrofit.create(PortalClient.class);
+
+        //method call
+        Call<ListBarangObject> call = client.getBarang(token);
+
+        call.enqueue(new Callback<ListBarangObject>() {
+            @Override
+            public void onResponse(Call<ListBarangObject> call, Response<ListBarangObject> response) {
+                ListBarangObject listBarangObject = response.body();
+                ArrayList<Barang> listBarang = new ArrayList<Barang>();
+                if(listBarangObject != null){
+                    List<BarangItem> listBarangItem = listBarangObject.getBarang();
+
+
+                    //perulangan ambil data
+                    for(BarangItem brg : listBarangItem){
+                        Barang barang = new Barang(brg.getNamaBarang(),"Test Dulu" ,brg.getLokasi());
+                        listBarang.add(barang);
+                    }
+
+                } else{
+                    Toast.makeText(getApplicationContext(), "Data Kosong", Toast.LENGTH_SHORT).show();
+
+                }
+
+                adapter.setListData(listBarang);
+
+            }
+
+            @Override
+            public void onFailure(Call<ListBarangObject> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Gagal Mengubungi Server", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     public ArrayList<Barang> getBarang(){

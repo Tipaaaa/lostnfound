@@ -56,6 +56,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
 
     public void setListData(ArrayList<Barang> listData) {
         this.listData = listData;
+        notifyDataSetChanged();
     }
 
     @NonNull

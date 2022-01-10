@@ -1,0 +1,135 @@
+package com.example.lost_found.model;
+
+import com.google.gson.annotations.SerializedName;
+
+public class BarangItem{
+
+    @SerializedName("id_penemu")
+    private int idPenemu;
+
+    @SerializedName("id_kategori")
+    private int idKategori;
+
+    @SerializedName("updated_at")
+    private String updatedAt;
+
+    @SerializedName("latitude")
+    private String latitude;
+
+    @SerializedName("created_at")
+    private String createdAt;
+
+    @SerializedName("nama_barang")
+    private String namaBarang;
+
+    @SerializedName("lokasi")
+    private String lokasi;
+
+    @SerializedName("id")
+    private int id;
+
+    @SerializedName("deskripsi")
+    private String deskripsi;
+
+    @SerializedName("gambar")
+    private String gambar;
+
+    @SerializedName("status")
+    private int status;
+
+    @SerializedName("longitude")
+    private String longitude;
+
+    public void setIdPenemu(int idPenemu){
+        this.idPenemu = idPenemu;
+    }
+
+    public int getIdPenemu(){
+        return idPenemu;
+    }
+
+    public void setIdKategori(int idKategori){
+        this.idKategori = idKategori;
+    }
+
+    public int getIdKategori(){
+        return idKategori;
+    }
+
+    public void setUpdatedAt(String updatedAt){
+        this.updatedAt = updatedAt;
+    }
+
+    public String getUpdatedAt(){
+        return updatedAt;
+    }
+
+    public void setLatitude(String latitude){
+        this.latitude = latitude;
+    }
+
+    public String getLatitude(){
+        return latitude;
+    }
+
+    public void setCreatedAt(String createdAt){
+        this.createdAt = createdAt;
+    }
+
+    public String getCreatedAt(){
+        return createdAt;
+    }
+
+    public void setNamaBarang(String namaBarang){
+        this.namaBarang = namaBarang;
+    }
+
+    public String getNamaBarang(){
+        return namaBarang;
+    }
+
+    public void lokasi(String lokasi){
+        this.lokasi = lokasi;
+    }
+    public String getLokasi(){return lokasi;}
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public void setDeskripsi(String deskripsi){
+        this.deskripsi = deskripsi;
+    }
+
+    public String getDeskripsi(){
+        return deskripsi;
+    }
+
+    public void setGambar(String gambar){
+        this.gambar = gambar;
+    }
+
+    public String getGambar(){
+        return gambar;
+    }
+
+    public void setStatus(int status){
+        this.status = status;
+    }
+
+    public int getStatus(){
+        return status;
+    }
+
+    public void setLongitude(String longitude){
+        this.longitude = longitude;
+    }
+
+    public String getLongitude(){
+        return longitude;
+    }
+}
