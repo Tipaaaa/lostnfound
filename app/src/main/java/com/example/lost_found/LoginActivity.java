@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = editPassword.getText().toString();
 
         //buat objek klien
-        String API_BASE_URL = "https://a61d-125-167-48-26.ngrok.io/";
+        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -68,6 +68,10 @@ public class LoginActivity extends AppCompatActivity {
         //panggil method
         Call<AuthClass> call = client.checkLogin(username, password);
 
+        //putar
+        setStatus(1);
+
+
         call.enqueue(new Callback<AuthClass>() {
             @Override
             public void onResponse(Call<AuthClass> call, Response<AuthClass> response) {
@@ -78,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                     AuthData data = authClass.getData();
                     String token = data.getToken();
                     String nama = data.getNama();
+                    int i_user = data.getId();
 
                     //simpan data
                     SharedPreferences simpandata =
@@ -86,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     editor.putString("token", token);
                     editor.putString("nama", nama);
+                    editor.putInt("i_user", i_user );
                     editor.apply();
 
                     Toast.makeText(getApplicationContext(), "Selamat Datang "+nama, Toast.LENGTH_SHORT).show();
@@ -95,17 +101,30 @@ public class LoginActivity extends AppCompatActivity {
                 } else{
                     Toast.makeText(getApplicationContext(), "Username atau Password Salah", Toast.LENGTH_SHORT).show();
                 }
+                setStatus(0);
 
             }
 
             @Override
             public void onFailure(Call<AuthClass> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Gagal Login", Toast.LENGTH_SHORT).show();
-
+                setStatus(0);
             }
         });
 
 
+    }
+    public void setStatus(int statusbar){
+        ProgressBar lo = findViewById(R.id.progressBarLogin);
+        //Button login = imageview23
+        Button loginBtn = findViewById(R.id.buttonlogin);
+        if (statusbar == 1){
+            lo.setVisibility(View.VISIBLE);
+            loginBtn.setVisibility(View.GONE);
+        } else if (statusbar == 0){
+            lo.setVisibility(View.GONE);
+            loginBtn.setVisibility(View.VISIBLE);
+        }
     }
 
     //on click pada login

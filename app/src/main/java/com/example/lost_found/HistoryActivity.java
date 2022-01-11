@@ -23,7 +23,7 @@ public class HistoryActivity extends AppCompatActivity implements BarangAdapter.
         setContentView(R.layout.activity_history);
 
         BarangAdapter adapterHB = new BarangAdapter();
-        adapterHB.setListData(getBarang());
+
         adapterHB.setListener(this);
 
         rvHistoryBarang = findViewById(R.id.rvHistoryBarang);
@@ -33,55 +33,7 @@ public class HistoryActivity extends AppCompatActivity implements BarangAdapter.
         rvHistoryBarang.setLayoutManager(managerhistory);
     }
 
-    public ArrayList<Barang> getBarang(){
-        ArrayList<Barang> listBarang = new ArrayList<Barang>();
-        String nama;
-        String Kategori;
-        String details = "Details";
-        listBarang.add(new Barang(
-                nama = "Tumbler",
-                Kategori = "Lain-lain",
-                details));
-        listBarang.add(new Barang(
-                nama = "Tas Converse",
-                Kategori = "Tas",
-                details));
-        listBarang.add(new Barang(
-                nama = "Laptop HP Envy",
-                Kategori = "Elektronik",
-                details));
-        listBarang.add(new Barang(
-                nama = "Tas 'False Pretense'",
-                Kategori = "Tas",
-                details));
-        listBarang.add(new Barang(
-                nama = "Kaos Merah Maroon",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "Converse Putih",
-                Kategori = "Sepatu",
-                details));
-        listBarang.add(new Barang(
-                nama = "Jam DW Coklat",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "iPhone 11 Pro",
-                Kategori = "Elektronik",
-                details));
-        listBarang.add(new Barang(
-                nama = "Jaket Hitam",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "Dompet Coklat",
-                Kategori = "Pakaian",
-                details));
 
-
-        return listBarang;
-    }
 
     @Override
     public void onClick(View v, Barang barang) {

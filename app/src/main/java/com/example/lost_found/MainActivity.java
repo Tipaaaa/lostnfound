@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         SharedPreferences simpan = getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
         String nama = simpan.getString("nama", "");
         String token = simpan.getString("token", "");
-        Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
 
 
         rvListBarang = findViewById(R.id.rvListBarang);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
         // minta data default
         //buat objek klien
-        String API_BASE_URL = "https://a61d-125-167-48-26.ngrok.io/";
+        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -109,7 +109,15 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
                     //perulangan ambil data
                     for(BarangItem brg : listBarangItem){
-                        Barang barang = new Barang(brg.getNamaBarang(),"Test Dulu" ,brg.getLokasi());
+                        Barang barang = new Barang(brg.getNamaBarang(),
+                                brg.getNama(),
+                                brg.getId(),
+                                brg.getKontak(),
+                                brg.getDeskripsi(),
+                                brg.getLokasi(),
+                                brg.getIdPenemu(),
+                                brg.getGambar()
+                        );
                         listBarang.add(barang);
                     }
 
@@ -130,55 +138,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         });
     }
 
-    public ArrayList<Barang> getBarang(){
-        ArrayList<Barang> listBarang = new ArrayList<Barang>();
-        String nama;
-        String Kategori;
-        String details = "Details";
-        listBarang.add(new Barang(
-                nama = "Tumbler",
-                Kategori = "Lain-lain",
-                details));
-        listBarang.add(new Barang(
-                nama = "Tas Converse",
-                Kategori = "Tas",
-                details));
-        listBarang.add(new Barang(
-                nama = "Laptop HP Envy",
-                Kategori = "Elektronik",
-                details));
-        listBarang.add(new Barang(
-                nama = "Tas 'False Pretense'",
-                Kategori = "Tas",
-                details));
-        listBarang.add(new Barang(
-                nama = "Kaos Merah Maroon",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "Converse Putih",
-                Kategori = "Sepatu",
-                details));
-        listBarang.add(new Barang(
-                nama = "Jam DW Coklat",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "iPhone 11 Pro",
-                Kategori = "Elektronik",
-                details));
-        listBarang.add(new Barang(
-                nama = "Jaket Hitam",
-                Kategori = "Pakaian",
-                details));
-        listBarang.add(new Barang(
-                nama = "Dompet Coklat",
-                Kategori = "Pakaian",
-                details));
 
-
-        return listBarang;
-    }
 
     public ArrayList<Kategori> getKategori(){
         ArrayList<Kategori> listKategory = new ArrayList<Kategori>();
@@ -208,8 +168,15 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
     //on click pada list barang
     public void onClick(View v, Barang barang) {
         Intent detailBarangIntent = new Intent(this, DetailFoundActivity.class);
+
         detailBarangIntent.putExtra("NAMA_BARANG", barang.nama);
+        detailBarangIntent.putExtra("deskripsiB", barang.deskripsiB);
+        detailBarangIntent.putExtra("kontak", barang.kontak);
         detailBarangIntent.putExtra("Kategori", barang.Kategori);
+        detailBarangIntent.putExtra("lokasi", barang.lokasi);
+        detailBarangIntent.putExtra("id_barang", barang.id_barang);
+        detailBarangIntent.putExtra("id_penemu", barang.id_penemu);
+
         startActivity(detailBarangIntent);
 
 
@@ -219,6 +186,13 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
     public void homeToProfile(View view){
         Intent profileIntent = new Intent(this,  ProfileActivity.class);
         startActivity(profileIntent);
+    }
+
+    //on click pada profile
+
+    public void addBarangi(View view){
+        Intent detailIntent = new Intent(this,  DetailbarangActivity.class);
+        startActivity(detailIntent);
     }
 
     @Override

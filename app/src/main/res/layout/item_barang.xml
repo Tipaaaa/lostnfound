@@ -2,6 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="9dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
     android:id="@+id/cardItemBarang"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -24,8 +27,8 @@
 
         <ImageView
             android:id="@+id/imageBarang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
