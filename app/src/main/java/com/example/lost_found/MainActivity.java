@@ -116,7 +116,9 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
                                 brg.getDeskripsi(),
                                 brg.getLokasi(),
                                 brg.getIdPenemu(),
-                                brg.getGambar()
+                                brg.getGambar(),
+                                brg.getLatitude(),
+                                brg.getLongitude()
                         );
                         listBarang.add(barang);
                     }
@@ -176,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         detailBarangIntent.putExtra("lokasi", barang.lokasi);
         detailBarangIntent.putExtra("id_barang", barang.id_barang);
         detailBarangIntent.putExtra("id_penemu", barang.id_penemu);
+        detailBarangIntent.putExtra("latitude", barang.lat);
+        detailBarangIntent.putExtra("longitude", barang.longii);
+
 
         startActivity(detailBarangIntent);
 

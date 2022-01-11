@@ -160,6 +160,7 @@
         android:id="@+id/imageView7"
         android:layout_width="32dp"
         android:layout_height="30dp"
+        android:onClick="klilMap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.845"
@@ -191,6 +192,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textnomor" />
+
+    <fragment
+        android:id="@+id/mapF"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="355dp"
+        android:layout_height="134dp"
+        map:uiZoomToolbars="True"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLokasib" />
 
     <Button
         android:id="@+id/buttonclaim"
