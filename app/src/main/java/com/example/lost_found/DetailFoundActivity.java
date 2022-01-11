@@ -125,12 +125,17 @@ public class DetailFoundActivity extends AppCompatActivity implements OnMapReady
         Double lat = detailBarangIntent.getDoubleExtra("latitude", 0.0);
         Double longii = detailBarangIntent.getDoubleExtra("longitude", 0.0);
 
+        //ui setting
+        //googleMap.getUiSettings().isZoomControlsEnabled(true);
+        //googleMap.getUiSettings().isRotateGesturesEnabled(true);
+
+
         googleMap.addMarker(new MarkerOptions()
                 .position(new LatLng(lat, longii))
                 .title("Barangmu Di sini Hilangnya. . "));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(lokasiBrg));
         LatLng lokasiBrg = new LatLng(lat, longii);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(lokasiBrg));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lokasiBrg, 13));
     }
 
     public void hideTombol(int statusbar){

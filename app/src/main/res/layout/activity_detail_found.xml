@@ -195,10 +195,13 @@
 
     <fragment
         android:id="@+id/mapF"
+
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="355dp"
         android:layout_height="134dp"
-        map:uiZoomToolbars="True"
+
+
+
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
