@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:text="Hi, User!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.067" />
 
     <TextView
         android:id="@+id/textView18"
@@ -25,7 +25,7 @@
         android:layout_marginTop="4dp"
         android:text="Let's Find Your Lost Item!"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -40,28 +40,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:srcCompat="@drawable/bg_input" />
 
-    <ImageView
-        android:id="@+id/klikProfile"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="homeToProfile"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.941"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:srcCompat="@drawable/user"
-        tools:ignore="SpeakableTextPresentCheck" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListBarang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.033"
         tools:listitem="@layout/item_barang" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -76,5 +65,37 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
         app:layout_constraintVertical_bias="1.0"
         tools:listitem="@layout/item_category" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="52dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/roundedbutton"
+        android:onClick="addBarangi"
+        app:icon="@android:drawable/ic_input_add"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="50dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/circle_button"
+        android:onClick="homeToProfile"
+        app:icon="@drawable/user1"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
