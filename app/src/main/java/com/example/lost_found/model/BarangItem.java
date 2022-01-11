@@ -14,7 +14,7 @@ public class BarangItem{
     private String updatedAt;
 
     @SerializedName("latitude")
-    private String latitude;
+    private Double latitude;
 
     @SerializedName("created_at")
     private String createdAt;
@@ -44,7 +44,7 @@ public class BarangItem{
     private int status;
 
     @SerializedName("longitude")
-    private String longitude;
+    private Double longitude;
 
     public void setIdPenemu(int idPenemu){
         this.idPenemu = idPenemu;
@@ -70,11 +70,11 @@ public class BarangItem{
         return updatedAt;
     }
 
-    public void setLatitude(String latitude){
+    public void setLatitude(Double latitude){
         this.latitude = latitude;
     }
 
-    public String getLatitude(){
+    public Double getLatitude(){
         return latitude;
     }
 
@@ -139,11 +139,11 @@ public class BarangItem{
         return status;
     }
 
-    public void setLongitude(String longitude){
+    public void setLongitude(Double longitude){
         this.longitude = longitude;
     }
 
-    public String getLongitude(){
+    public Double getLongitude(){
         return longitude;
     }
 }

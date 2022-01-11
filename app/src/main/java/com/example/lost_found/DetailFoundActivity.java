@@ -8,12 +8,18 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lost_found.databinding.ActivityMapsBinding; //
 import com.example.lost_found.model.ClaimResponse;
 import com.example.lost_found.retrofit.PortalClient;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment; //
+import com.google.android.gms.maps.model.LatLng; //
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -23,23 +29,57 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DetailFoundActivity extends AppCompatActivity {
+public class DetailFoundActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     TextView textNamaBarang;
     TextView textkategori;
     TextView textKontak;
     TextView textD;
     TextView textLokasi;
+
+    //All About Map
+    private GoogleMap mMap;
+    private ActivityMapsBinding binding;
+
+
+
+
+    public void klilMap(View view){
+        Intent detailBarangIntent = getIntent();
+        Double lat = detailBarangIntent.getDoubleExtra("latitude", 0.0);
+        Double longii = detailBarangIntent.getDoubleExtra("longitude", 0.0);
+
+
+
+        Intent profileIntent = new Intent(this,  MapsActivity.class);
+
+        profileIntent.putExtra("latitudee", lat);
+        profileIntent.putExtra("longitudee", longii);
+
+        startActivity(profileIntent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_found);
+
+        //MAPS
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.mapF);
+        mapFragment.getMapAsync(this);
+
+
+
 
         //sharedpreference
         SharedPreferences simpan = getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
         String nama = simpan.getString("nama", "");
         String token = simpan.getString("token", "");
         int i_user = simpan.getInt("i_user", 0);
+
+        //MAPS
+
 
 
         Intent detailBarangIntent = getIntent();
@@ -49,6 +89,10 @@ public class DetailFoundActivity extends AppCompatActivity {
         String lokasi = detailBarangIntent.getStringExtra("lokasi");
         String deskripsi = detailBarangIntent.getStringExtra("deskripsiB");
         int id_penemub = detailBarangIntent.getIntExtra("id_penemu", 0);
+
+        //Maps
+
+
 
 
         if(i_user==id_penemub){
@@ -75,6 +119,25 @@ public class DetailFoundActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        Intent detailBarangIntent = getIntent();
+        Double lat = detailBarangIntent.getDoubleExtra("latitude", 0.0);
+        Double longii = detailBarangIntent.getDoubleExtra("longitude", 0.0);
+
+        //ui setting
+        //googleMap.getUiSettings().isZoomControlsEnabled(true);
+        //googleMap.getUiSettings().isRotateGesturesEnabled(true);
+
+
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(lat, longii))
+                .title("Barangmu Di sini Hilangnya. . "));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(lokasiBrg));
+        LatLng lokasiBrg = new LatLng(lat, longii);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lokasiBrg, 13));
+    }
+
     public void hideTombol(int statusbar){
         Button loginBtn = findViewById(R.id.buttonclaim);
         if (statusbar == 1){
