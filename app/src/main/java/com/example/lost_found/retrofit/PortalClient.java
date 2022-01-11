@@ -38,7 +38,9 @@ public interface PortalClient {
     Call<AddBarangResponse> addBarang(@Field("nama_barang") String namaB,
                                       @Field("deskripsi") String dskripsiB,
                                       @Field("lokasi") String lokasiB,
-                                      @Field("id_penemu") int i_userr);
+                                      @Field("id_penemu") int i_userr,
+                                      @Field("lat") Double lat,
+                                      @Field("longii") Double longii);
 
     //Endpoin Claim Barang
     @FormUrlEncoded

@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
         // minta data default
         //buat objek klien
-        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
+        String API_BASE_URL = "https://bae2-125-167-49-226.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -116,7 +116,9 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
                                 brg.getDeskripsi(),
                                 brg.getLokasi(),
                                 brg.getIdPenemu(),
-                                brg.getGambar()
+                                brg.getGambar(),
+                                brg.getLatitude(),
+                                brg.getLongitude()
                         );
                         listBarang.add(barang);
                     }
@@ -176,6 +178,9 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         detailBarangIntent.putExtra("lokasi", barang.lokasi);
         detailBarangIntent.putExtra("id_barang", barang.id_barang);
         detailBarangIntent.putExtra("id_penemu", barang.id_penemu);
+        detailBarangIntent.putExtra("latitude", barang.lat);
+        detailBarangIntent.putExtra("longitude", barang.longii);
+
 
         startActivity(detailBarangIntent);
 

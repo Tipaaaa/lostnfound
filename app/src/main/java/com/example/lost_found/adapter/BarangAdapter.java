@@ -86,7 +86,7 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
         holder.klikDetails.setText(barang.lokasi);
         String namaGambar = barang.gambarB;
 
-        int[] namaGB = {R.drawable.iphone};
+        int[] namaGB = {R.drawable.kustom};
 
         holder.gambarBarang.setImageResource(namaGB[0]);
 
