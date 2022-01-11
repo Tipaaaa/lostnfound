@@ -63,7 +63,7 @@ public class RegistActivity extends AppCompatActivity {
         String kontakRegis = editKontakRegis.getText().toString();
 
         //buat objek klien
-        String API_BASE_URL = " https://2779-125-167-49-94.ngrok.io/";
+        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 

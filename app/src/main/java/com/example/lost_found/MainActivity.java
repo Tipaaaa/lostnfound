@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
         SharedPreferences simpan = getSharedPreferences("com.example.lost_found.SIMP", MODE_PRIVATE);
         String nama = simpan.getString("nama", "");
         String token = simpan.getString("token", "");
-        Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, nama, Toast.LENGTH_SHORT).show();
 
 
         rvListBarang = findViewById(R.id.rvListBarang);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
         // minta data default
         //buat objek klien
-        String API_BASE_URL = " https://2779-125-167-49-94.ngrok.io/";
+        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -115,7 +115,8 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
                                 brg.getKontak(),
                                 brg.getDeskripsi(),
                                 brg.getLokasi(),
-                                brg.getIdPenemu()
+                                brg.getIdPenemu(),
+                                brg.getGambar()
                         );
                         listBarang.add(barang);
                     }
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
     //on click pada profile
     public void homeToProfile(View view){
-        Intent profileIntent = new Intent(this,  DetailbarangActivity.class);
+        Intent profileIntent = new Intent(this,  ProfileActivity.class);
         startActivity(profileIntent);
     }
 

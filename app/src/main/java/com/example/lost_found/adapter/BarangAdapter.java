@@ -1,13 +1,18 @@
 package com.example.lost_found.adapter;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.lost_found.MainActivity;
 import com.example.lost_found.R;
 import com.example.lost_found.model.Barang;
 
@@ -22,11 +27,15 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
     public class BarangViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener{
 
         TextView textNamaBarang, textKategori, klikDetails;
+        ImageView gambarBarang;
 
 
-
+        //ITEM BARANG  di recycle view
         public BarangViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            gambarBarang = itemView.findViewById(R.id.imageBarang);
+
             textNamaBarang = itemView.findViewById(R.id.textNamaBarang);
             textKategori = itemView.findViewById(R.id.textKategori);
             klikDetails = itemView.findViewById(R.id.klikDetails);
@@ -75,6 +84,15 @@ public class BarangAdapter extends RecyclerView.Adapter<BarangAdapter.BarangView
         holder.textNamaBarang.setText(barang.nama);
         holder.textKategori.setText(barang.Kategori);
         holder.klikDetails.setText(barang.lokasi);
+        String namaGambar = barang.gambarB;
+
+        int[] namaGB = {R.drawable.iphone};
+
+        holder.gambarBarang.setImageResource(namaGB[0]);
+
+    }
+    public static int getImageId(Context context, String imageName) {
+        return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
     }
 
     @Override

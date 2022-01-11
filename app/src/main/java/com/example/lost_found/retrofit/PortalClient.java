@@ -4,9 +4,9 @@ import com.example.lost_found.model.AddBarangResponse;
 import com.example.lost_found.model.AuthClass;
 import com.example.lost_found.model.ClaimResponse;
 import com.example.lost_found.model.ListBarangObject;
+import com.example.lost_found.model.ProfileResponse;
 import com.example.lost_found.model.RegisResponse;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -44,5 +44,10 @@ public interface PortalClient {
     @FormUrlEncoded
     @POST("api/claimbarang")
     Call<ClaimResponse> claimBarang(@Field("id") String id_barang);
+
+    //Enpoin Profile
+    @FormUrlEncoded
+    @POST("api/profile")
+    Call<ProfileResponse> getProfile(@Field("token") String token);
 
 }

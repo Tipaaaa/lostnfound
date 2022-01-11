@@ -173,6 +173,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:onClick="telepon"
         android:text="Ini Nomor"
         android:textAlignment="textStart"
         android:textColor="#673AB7"
