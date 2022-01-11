@@ -53,7 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
         String token = simpan.getString("token", "");
 
         //buat objek klien
-        String API_BASE_URL = "https://f75a-36-69-9-69.ngrok.io/";
+        String API_BASE_URL = "https://bae2-125-167-49-226.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
