@@ -160,7 +160,7 @@ public class DetailFoundActivity extends AppCompatActivity implements OnMapReady
         String idbarangs = detailBarangIntent.getStringExtra("id_barang");
 
         //buat objek klien
-        String API_BASE_URL = " https://f75a-36-69-9-69.ngrok.io/";
+        String API_BASE_URL = "https://2831-114-125-11-219.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 

@@ -18,6 +18,8 @@ import com.example.lost_found.model.BarangItem;
 import com.example.lost_found.model.Kategori;
 import com.example.lost_found.model.ListBarangObject;
 import com.example.lost_found.retrofit.PortalClient;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
         // minta data default
         //buat objek klien
-        String API_BASE_URL = "https://bae2-125-167-49-226.ngrok.io/";
+        String API_BASE_URL = "https://2831-114-125-11-219.ngrok.io/";
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
@@ -138,6 +140,8 @@ public class MainActivity extends AppCompatActivity implements BarangAdapter.OnB
 
             }
         });
+
+        FirebaseMessaging.getInstance().subscribeToTopic("penambahan_barang");
     }
 
 

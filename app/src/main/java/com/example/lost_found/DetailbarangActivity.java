@@ -108,7 +108,12 @@ public class DetailbarangActivity extends AppCompatActivity {
         int i_user = simpan.getInt("i_user", 0);
 
         //buat objek klien
-        String API_BASE_URL = "https://bae2-125-167-49-226.ngrok.io/";
+        String API_BASE_URL = "https://2831-114-125-11-219.ngrok.io/";
+
+        //buka ngrok ny lagi
+        //add nya berhasil ga??
+        //dtaa masuk db??
+        //masalah internet
 
         OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
 
